@@ -5,6 +5,7 @@ import MainLayout from '@/layouts/MainLayout';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import backgroundImage from '@/images/image.png';
 
 export default function Login() {
   const [, setLocation] = useLocation();
@@ -33,15 +34,12 @@ export default function Login() {
   return (
     <MainLayout>
       <div className="min-h-screen relative overflow-hidden flex items-center justify-center py-12 px-4">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/20"></div>
-        {/* Pattern overlay */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231F7A5C' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        {/* Background image */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+          backgroundImage: `url(${backgroundImage})`,
         }}></div>
-        {/* Decorative circles */}
-        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl"></div>
+        {/* Overlay gradient for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-secondary/90"></div>
         
         <div className="w-full max-w-md relative z-10">
           <div className="bg-background/80 backdrop-blur-md border border-border rounded-2xl p-8 shadow-xl">

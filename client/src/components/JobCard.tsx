@@ -20,13 +20,6 @@ export default function JobCard({ job }: JobCardProps) {
               </h3>
               <p className="text-sm text-muted-foreground">{job.company}</p>
             </div>
-            {job.companyLogo && (
-              <img
-                src={job.companyLogo}
-                alt={job.company}
-                className="w-12 h-12 rounded-lg object-cover mr-4"
-              />
-            )}
           </div>
 
           {/* Description */}

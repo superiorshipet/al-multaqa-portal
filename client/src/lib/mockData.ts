@@ -39,12 +39,15 @@ export interface Company {
   registrationDate: string;
 }
 
+// Using local image for company logos
+const companyLogoUrl = '/images/image.png';
+
 export const mockJobs: Job[] = [
   {
     id: '1',
     title: 'مهندس برمجيات أول',
     company: 'شركة التقنية المتقدمة',
-    companyLogo: 'https://via.placeholder.com/100?text=Tech+Co',
+    companyLogo: companyLogoUrl,
     description: 'نبحث عن مهندس برمجيات ذو خبرة في تطوير تطبيقات الويب والجوال باستخدام التقنيات الحديثة.',
     requirements: [
       'خبرة 3+ سنوات في تطوير البرمجيات',
@@ -63,7 +66,7 @@ export const mockJobs: Job[] = [
     id: '2',
     title: 'مصمم واجهات المستخدم',
     company: 'ستوديو التصميم الإبداعي',
-    companyLogo: 'https://via.placeholder.com/100?text=Design+Studio',
+    companyLogo: companyLogoUrl,
     description: 'نبحث عن مصمم UI/UX موهوب لإنشاء تجارب مستخدم استثنائية.',
     requirements: [
       'خبرة في Figma و Adobe XD',
@@ -82,7 +85,7 @@ export const mockJobs: Job[] = [
     id: '3',
     title: 'متخصص محاسبة',
     company: 'شركة الاستشارات المالية',
-    companyLogo: 'https://via.placeholder.com/100?text=Finance+Co',
+    companyLogo: companyLogoUrl,
     description: 'نبحث عن محاسب ذو خبرة للعمل في قسم المحاسبة المالية.',
     requirements: [
       'شهادة البكالوريوس في المحاسبة',
@@ -101,7 +104,7 @@ export const mockJobs: Job[] = [
     id: '4',
     title: 'متدرب تطوير ويب',
     company: 'أكاديمية البرمجة',
-    companyLogo: 'https://via.placeholder.com/100?text=Academy',
+    companyLogo: companyLogoUrl,
     description: 'برنامج تدريب مكثف لمتدربين جدد في مجال تطوير الويب.',
     requirements: [
       'شهادة ثانوية على الأقل',
@@ -120,7 +123,7 @@ export const mockJobs: Job[] = [
     id: '5',
     title: 'مدير موارد بشرية',
     company: 'شركة الموارد البشرية المتقدمة',
-    companyLogo: 'https://via.placeholder.com/100?text=HR+Co',
+    companyLogo: companyLogoUrl,
     description: 'نبحث عن مدير موارد بشرية ذو خبرة لقيادة فريق الموارد البشرية.',
     requirements: [
       'خبرة 5+ سنوات في إدارة الموارد البشرية',
@@ -183,7 +186,7 @@ export const mockCompanies: Company[] = [
     email: 'info@techco.com',
     phone: '0114567890',
     city: 'الرياض',
-    logo: 'https://via.placeholder.com/100?text=Tech+Co',
+    logo: companyLogoUrl,
     description: 'شركة متخصصة في تطوير البرمجيات والحلول التقنية',
     status: 'approved',
     registrationDate: '2025-06-15',
@@ -194,7 +197,7 @@ export const mockCompanies: Company[] = [
     email: 'contact@designstudio.com',
     phone: '0124567890',
     city: 'جدة',
-    logo: 'https://via.placeholder.com/100?text=Design+Studio',
+    logo: companyLogoUrl,
     description: 'ستوديو متخصص في التصميم الجرافيكي والواجهات',
     status: 'approved',
     registrationDate: '2025-07-20',
