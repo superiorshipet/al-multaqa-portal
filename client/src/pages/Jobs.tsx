@@ -44,8 +44,14 @@ export default function Jobs() {
     <MainLayout>
       <div className="min-h-screen bg-background">
         {/* Header */}
-        <section className="bg-gradient-to-b from-primary/10 to-transparent py-8 md:py-12">
-          <div className="container mx-auto px-4">
+        <section className="relative py-8 md:py-12 overflow-hidden">
+          {/* Background gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent"></div>
+          {/* Pattern overlay */}
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231F7A5C' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+          <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-3xl md:text-4xl font-bold mb-2">الوظائف المتاحة</h1>
             <p className="text-muted-foreground">
               ابحث عن الوظيفة المناسبة لك من بين {mockJobs.length} وظيفة
@@ -54,8 +60,14 @@ export default function Jobs() {
         </section>
 
         {/* Search and Filters */}
-        <section className="bg-secondary/30 py-8 sticky top-16 z-40 border-b border-border">
-          <div className="container mx-auto px-4">
+        <section className="relative py-8 sticky top-16 z-40 border-b border-border overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/40 via-secondary/30 to-secondary/40"></div>
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, #1F7A5C 1px, transparent 1px), radial-gradient(circle at 75% 75%, #1F7A5C 1px, transparent 1px)`,
+            backgroundSize: '30px 30px',
+          }}></div>
+          <div className="container mx-auto px-4 relative z-10">
             {/* Search Bar */}
             <div className="mb-6">
               <div className="relative">
