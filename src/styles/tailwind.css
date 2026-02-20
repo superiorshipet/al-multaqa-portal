@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+html {
+  direction: rtl;
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
